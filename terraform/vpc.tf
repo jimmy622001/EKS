@@ -1,7 +1,7 @@
 # Resource: aws_vpc
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/vpc
 
-resource "aws_vpc" "main" {
+resource "aws_vpc" "ctse" {
   # The CIDR block for the VPC.
   cidr_block = "192.168.0.0/16"
 
@@ -25,12 +25,12 @@ resource "aws_vpc" "main" {
 
   # A map of tags to assign to the resource.
   tags = {
-    Name = "main"
+    Name = "ctse"
   }
 }
 
 output "vpc_id" {
-  value       = aws_vpc.main.id
+  value       = aws_vpc.ctse.id
   description = "VPC id."
   # Setting an output value as sensitive prevents Terraform from showing its value in plan and apply.
   sensitive = false
