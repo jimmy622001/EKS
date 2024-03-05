@@ -98,7 +98,7 @@ resource "aws_eks_node_group" "nodes_general" {
   disk_size = 20
 
   # Force version update if existing pods are unable to be drained due to a pod disruption budget issue.
-  force_update_version = true
+  force_update_version = false
 
   # List of instance types associated with the EKS Node Group
   instance_types = ["t3.small"]
