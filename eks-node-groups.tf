@@ -98,7 +98,7 @@ resource "aws_eks_node_group" "nodes_general" {
   disk_size = 20
 
   # Force version update if existing pods are unable to be drained due to a pod disruption budget issue.
-  force_update_version = false
+  force_update_version = true
 
   # List of instance types associated with the EKS Node Group
   instance_types = ["t3.small"]
@@ -108,7 +108,7 @@ resource "aws_eks_node_group" "nodes_general" {
   }
 
   # Kubernetes version
-  version = "1.18"
+  version = "1.28"
 
   # Ensure that IAM Role permissions are created before and deleted after EKS Node Group handling.
   # Otherwise, EKS will not be able to properly delete EC2 Instances and Elastic Network Interfaces.
