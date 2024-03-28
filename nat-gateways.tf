@@ -1,4 +1,3 @@
-
 # Resource: aws_nat_gateway
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/nat_gateway
 
